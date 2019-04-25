@@ -1,0 +1,122 @@
+@import "variables";
+@import "mixins";
+
+.uk-navbar-nav {}
+.uk-navbar-nav>li>a{ padding:0; min-height:auto; }
+.navbar-center{
+	@include sec-default(); background-color: transparent;
+	background:transparent;
+	width:87%;@include center-block();
+}
+// display:block !important;
+
+//*********************************//
+//********** header inline *********//
+//*********************************//
+
+.inline-header {@include sec-default();background-color: transparent;
+	padding:30px 0 20px;
+	.uk-navbar-container.inside{width:90%;background-color: transparent;}
+	h1{font-size:50px; margin-bottom: 10px;}
+	
+	.uk-navbar-nav{@include sec-default();
+	 	padding:0px 0 10px;
+	 	text-align: center;
+	}
+
+	.uk-navbar-nav li{
+		display: inline-block; float: none;margin: 0px 1.5%;
+		border-bottom: 2px solid transparent;
+
+		&.active {border-color: $black;}
+
+		a {font-size: 16px; font-family: $monte; color: $black; text-transform: uppercase; 
+			font-weight: $semi; text-shadow: 0px 1px 2px rgba($black,.1);
+			background-color: rgba($white,.4);
+			letter-spacing: .8px;padding:0; min-height: auto;}
+		&:first-child{margin-left: 0;}
+	}
+}
+
+.mobile-above {
+	@include sec-default(); padding: 20px 0;
+	display: none;
+
+	.nb-logo.mobile, .mobile-nav {display: inline-block; float: left;}
+	.nb-logo.mobile{width:250px;}
+	.mobile-nav {float: right; margin-top:-5px;}
+}
+
+.uk-offcanvas-bar.mnav {background-color: $black;
+	.uk-nav-header{border-bottom: $border; font-weight: bold; margin-bottom: 10px; color:$white; border-color: $white; font-weight: $semi; letter-spacing: 1px;}
+	.uk-nav li.fab img {height:16px;}
+	li{border-bottom: 1px solid rgba($white, .2); margin-bottom: 15px; padding-bottom: 6px;}
+}
+
+@include bp(tb) {
+	.inline-header {padding:0px 0 20px;
+		// .nb-logo {width: 29%;}
+		// .uk-navbar-nav{width:70%;
+		// 	li a {font-size:15px;}
+
+		// 	li.fab .nav-fab {height:15px; margin-top: 4px;}
+		// }
+	}
+}
+
+@include bp(br) {
+	// 	.inline-header {display: none;}
+	// 	.mobile-above{display:block;}
+
+	.inline-header .uk-navbar-nav li a {font-size: 15px;}
+}
+
+@include bp(oc) {
+	.logo-name {font-size: 29px;}
+	.mobile-above .inside{width: 90%}
+}
+
+@include bp(ph) {
+	.mobile-above {
+		.mobile-nav {margin-top: -7px;}
+		.nb-logo.mobile{width:210px;}
+	}
+
+}
+
+@include bp(sm) {
+	.mobile-above {
+		.mobile-nav {margin-top: 0px;}
+		.nb-logo.mobile{margin-top: 10px;}
+	}
+}
+
+
+//*********************************//
+//************* footer ************//
+//*********************************//
+
+footer {@include sec-default();
+	.clearfix.mobile,.clearfix.mob{display: none;}
+	.border-row{@include sec-default(); height:6px; margin-bottom: 30px;
+		border-top: $border; border-bottom: $border; border-color: rgba($black,.4);
+	}
+}
+
+.scroll-up {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  text-indent: -9999px;
+  @include sec-bgimage('up2.png');
+  background-size: 65%; background-position: center center;
+  z-index: 100;
+  border: 1px solid $black;
+  background-color: $white; 
+
+
+  // @include bp(tb) { left: 30px;visibility:visible; }
+  // @include bp(sm) { left: 15px; }
+}

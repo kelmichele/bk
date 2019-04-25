@@ -1,0 +1,38 @@
+$f9: #f9f9f9;
+$f8: #f8f7f7;
+$f0: #f0f0f0;
+$f3: #f3f3f3;
+$f2: #f2f2f2;
+$df: #dfdfdf;
+$white: #fff;
+$black: #000;
+$red: #ff0000;
+$cream: #fbf9f8;
+$gold: #ddb131;
+$dgold: darken($gold, 7%);
+$lgold: lighten($gold, 10%);
+
+$border: 1px solid $f0;
+$lpad: 60px 0;
+$lpad-tb: 45px 0;
+$lpad-tn: 25px 0;
+$pad: 80px 0;
+$pad-tb: 60px 0;
+$pad-tn: 35px 0;
+$xpad: 120px 0;
+$xpad-tb: 65px 0;
+$xpad-tn: 45px 0;
+
+
+
+
+$semi: 600;
+$monte: 'Montserrat', sans-serif;
+// $didot: 'linotype-didot-headline', serif;
+$didot: 'Silver South Serif';
+$quig: 'Silver South Script';
+$serif: 'Silver South Serif';
+$corg: 'Courgette', cursive;
+$pars: 'Parisienne', cursive;
+$vibes: 'Great Vibes', cursive;
+$body: $monte;

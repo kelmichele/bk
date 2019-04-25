@@ -1,0 +1,41 @@
+<div class="mobile-above">
+  <div class="inside">
+    <div class="nb-logo mobile">
+    </div>
+
+    <div class="mobile-nav">
+      <button class="uk-button" type="button" uk-toggle="target: #offcanvas-nav">
+        <span class="mmenu" uk-icon="icon: menu; ratio: 1.5;"></span>
+      </button>
+      <%= render 'layouts/mobile-nav' %>
+    </div>
+  </div>
+</div>
+
+<header class="inline-header centered">
+<!-- <header class="inline-header centered" uk-sticky="sel-target: .inline-header; cls-active: uk-navbar-sticky"> -->
+  <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+    <div class="navbar-center">
+      <div class="nb-logo">
+        <h1 class="norm vibes">Kelli &amp; Will</h1>
+      </div>
+
+      <div class="navstick">
+        <ul class="uk-navbar-nav">
+          <!-- <li><%= link_to "Home", root_path %></li> -->
+          <li><a href="#details">Details</a></li>
+          <li><a href="#accommodations">Accommodations</a></li>
+          <li><a href="#questions">Q&amp;A</a></li>
+          <li><a href="#registry">Registry</a></li>
+            <!--<li> <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li><%= link_to "Welcome", root_path %></li>
+              </ul>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>

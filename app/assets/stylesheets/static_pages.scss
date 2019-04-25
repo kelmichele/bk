@@ -1,0 +1,51 @@
+// Place all the styles related to the staticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "mixins";
+@import "variables";
+
+.bk-link {@include link(30%, $white); background-color: $black; @include tshadowl(rgba($black, .3));
+  text-transform: uppercase; height:auto;
+  &.autoh {height:auto; max-height: auto;}
+  &.alt {background-color:$dgold;}
+  &.admin {background-color: $red;}
+  &.center {@include center-block();}
+}
+.text-link{font-weight: bold; color: $black;
+  &.und {text-decoration: underline; }
+  &.admin {color: darken($red, 5%); font-size: 13px; text-transform: uppercase; letter-spacing: .2px;}
+}
+
+.full{@include sec-default();}
+.divBorder {width:80px;@include center-block(); margin-bottom:15px;}
+.border {@include sec-default(); height:5px; border-top:1px solid rgba($black,.3);border-bottom:1px solid rgba($black,.3);
+	&.single {border-top:0; opacity:.5;}
+	&.hlf {@include center-block(); width:50%;}
+}
+h3.title {font-family:$vibes; font-size: 35px; letter-spacing: .5px; 
+	background-color:$black; color:$white; padding:10px 0; text-align: center;
+}
+
+.home{ @include sec-default(); 
+	.open img {@include center-block();}
+	.intro {padding:60px 0; text-align:center;
+		h1, h2, h3, h4, p{line-height: 1.8em; margin:0;}
+		h2{ font-size:37px; letter-spacing: .5px; font-weight: normal; margin-top:20px;}
+		h3{font-weight:$semi; line-height: 1.6em; color:$dgold;}
+
+		padding:0 0 70px;
+		h4{font-size:16px;background-color:$white; padding:15px 10px 6px; margin-top:-30px;}
+	}
+
+	.acc, .faq {text-align:center;
+		.hotel{@include sec-default(); margin-bottom:40px;}
+		h4{ }
+
+		ul{margin:80px 0;}
+		.hotelAcc{margin:20px 0 40px;}
+		.uk-accordion-title {border-bottom: 2px dotted rgba($black,.2);font-weight:$semi; padding-bottom: 8px;}
+		.grandbox{@include sec-default(); margin:20px 0;
+			p{font-size:17px; margin-bottom:10px; font-weight: bold;}
+		}
+	}
+}
