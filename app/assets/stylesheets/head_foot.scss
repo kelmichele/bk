@@ -18,6 +18,7 @@
 	padding:30px 0 20px;
 	.uk-navbar-container.inside{width:90%;background-color: transparent;}
 	h1{font-size:50px; margin-bottom: 10px;}
+	.logo:hover {text-decoration: none;}
 	
 	.uk-navbar-nav{@include sec-default();
 	 	padding:0px 0 10px;
@@ -110,7 +111,7 @@ footer {@include sec-default();
   bottom: 30px;
   right: 30px;
   text-indent: -9999px;
-  @include sec-bgimage('up2.png');
+  @include sec-bgimage('up.png');
   background-size: 65%; background-position: center center;
   z-index: 100;
   border: 1px solid $black;

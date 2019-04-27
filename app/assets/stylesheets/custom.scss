@@ -70,7 +70,10 @@ body {
 	line-height: 1.5em;
   font-family: $body;
   @include sec-default();
-  @include sec-bgimage('dotsb.jpg');
+  // @include sec-bgimage('dotsb.jpg');
+  background-image: url(image_path('dotsb.jpg')), url(image_path('dots.jpg'));
+  background-repeat: no-repeat, no-repeat; background-position: top left, bottom right;background-size:100%, 100%;
+  position: relative; z-index: 0;
   &::before{@include before(); background-color:rgba($white,.65);}
 
   @include bp(br) {

@@ -1,0 +1,28 @@
+<% @page_title = "RSVP's" %>
+
+<div class="ipage-header">
+	<div class="inside">
+		<h1 class="bmargin0">Count Your RSVP's</h1>
+	</div>
+</div>
+
+
+<div class="full-sec">
+	<div class="inside">
+		<div class="full rsvp-list">
+			<% @responses.each do |response| %>
+				<!-- <= link_to response_path(response), class: 'db-listing' do %> -->
+					<h4 style="margin-bottom:0;"><b><%= response.name %></b> <span>(<%= response.created_at.to_date %>)</span></h4>
+					<p style="margin-top:0;">
+						<%= response.status %><br>
+						
+						<% if response.guest_count != '' %>
+							<strong><%= response.guest_count %></strong> Guests
+						<% end %>
+
+					</p>
+				<!-- < end %> -->
+			<% end %>
+		</div>
+	</div>
+</div>

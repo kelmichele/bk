@@ -1,8 +1,5 @@
 <div class="mobile-above">
   <div class="inside">
-    <div class="nb-logo mobile">
-    </div>
-
     <div class="mobile-nav">
       <button class="uk-button" type="button" uk-toggle="target: #offcanvas-nav">
         <span class="mmenu" uk-icon="icon: menu; ratio: 1.5;"></span>
@@ -17,7 +14,9 @@
   <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
     <div class="navbar-center">
       <div class="nb-logo">
-        <h1 class="norm vibes">Kelli &amp; Will</h1>
+        <%= link_to root_path, class: 'logo' do %>
+          <h1 class="norm vibes">Kelli &amp; Will</h1>
+        <% end %>
       </div>
 
       <div class="navstick">
@@ -26,7 +25,8 @@
           <li><a href="#details">Details</a></li>
           <li><a href="#accommodations">Accommodations</a></li>
           <li><a href="#questions">Q&amp;A</a></li>
-          <li><a href="#registry">Registry</a></li>
+          <li><a href="#rsvp">RSVP</a></li>
+          <!-- <li><a href="#registry">Registry</a></li> -->
             <!--<li> <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <li><%= link_to "Welcome", root_path %></li>

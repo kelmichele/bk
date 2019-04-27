@@ -1,0 +1,37 @@
+
+<%= form_for(@response, :html => {class: "form-horizontal", role: "form" }) do |f| %>
+  <%= render 'shared/errors', obj: @response %>
+  
+  <fieldset>
+    <div class="form-group name">
+      <label>* Name:</label><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="form-group status">
+     <%= f.select(:status) do %>
+        <% [['Select Response', ''], ['Accepts With Pleasure', 'Accepts With Pleasure'], ['Declines With Regret', 'Declines With Regret']].each do |c| -%>
+          <%= content_tag(:option, c.first, value: c.last) %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="form-group guests">
+      <label>* Number of Guests <span>(if attending)</span>: </label><br>
+      <%= f.text_field :guest_count %>
+    </div>
+
+
+    <div class="form-group honey">
+      <%= label_tag :honey %>
+      <%= f.text_field :honey %>
+      <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
+    </div>
+
+
+    <div class="form-group submit">
+      <%= f.submit "Submit", :class=> "send-message" %>
+    </div>
+  </fieldset>
+<% end %>
+

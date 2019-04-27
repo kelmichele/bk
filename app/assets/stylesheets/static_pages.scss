@@ -1,9 +1,12 @@
+// 65deca
 // Place all the styles related to the staticPages controller here.
-// They will automatically be included in application.css.
+// 06367fd711939a They will automatically be included in application.css.3633bfb4249f
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "mixins";
 @import "variables";
 
+
+.honey {position: absolute;left: -9999px;}
 .bk-link {@include link(30%, $white); background-color: $black; @include tshadowl(rgba($black, .3));
   text-transform: uppercase; height:auto;
   &.autoh {height:auto; max-height: auto;}
@@ -37,7 +40,7 @@ h3.title {font-family:$vibes; font-size: 35px; letter-spacing: .5px;
 		h4{font-size:16px;background-color:$white; padding:15px 10px 6px; margin-top:-30px;}
 	}
 
-	.acc, .faq {text-align:center;
+	.acc, .faq, .rsvp {text-align:center;
 		.hotel{@include sec-default(); margin-bottom:40px;}
 		h4{ }
 
@@ -48,4 +51,23 @@ h3.title {font-family:$vibes; font-size: 35px; letter-spacing: .5px;
 			p{font-size:17px; margin-bottom:10px; font-weight: bold;}
 		}
 	}
+
+	.rsvp{
+		.inside.form-size{width:50%;}
+		#new_response{margin:50px 0; text-align:left; background-color: rgba($white,.7); 
+			padding: 20px 40px; width:80%; @include center-block();
+			box-shadow: 0px 10px 50px rgba($black,.15);
+		}
+		fieldset {margin-bottom: 0; padding-bottom: 0;}
+		// .form-group.status,.form-group {width:50%;}
+		label span {font-size:12px;}
+	}
+}
+
+
+
+.rsvp-list {
+	background-color: $white; 
+	h4 span {font-size: 15px;}
+	p strong {font-weight:bold;}
 }
